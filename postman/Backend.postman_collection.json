@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "4e98527e-2ea6-45fd-ac05-f0d6527e9b9b",
+		"name": "Yellow API GO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Yellow: SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"cbc@gmail.com\",\n    \"password\": \"admin1234\",\n    \"name\": \"Carmelo\",\n    \"lastname\": \"Buelvas\",\n    \"birthDate\": \"1991-12-13T00:00:00Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/yellow/v1/signup?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"yellow",
+								"v1",
+								"signup"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yellow: SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"cbc@gmail.com\",\n  \"password\": \"admin1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/yellow/v1/signin?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"yellow",
+								"v1",
+								"signin"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Yellow: Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRiMDIyZmFjOTE2MzhiMGI3ZWIyNSIsImVtYWlsIjoiY2JjQGdtYWlsLmNvbSIsIm5hbWUiOiJDYXJtZWxvIiwibGFzdG5hbWUiOiJCdWVsdmFzIiwiYmlydGhEYXRlIjoiMTk5MS0xMi0xMyAwMDowMDowMCArMDAwMCBVVEMiLCJiaW9ncmFwaHkiOiIiLCJsb2NhdGlvbiI6IiIsIndlYlNpdGUiOiIiLCJleHAiOjE2Mjk0MjIwMDF9.3L0b2KsltYOrstJYGR-D364FVopzItrXNPVhrCCoUR8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Carmelo\",\n    \"lastname\": \"Buelvas Comas\",\n    \"birthDate\": \"1982-12-13T00:00:00Z\",\n    \"email\": \"cbuelvasc@gmail.com\",\n    \"password\": \"admin1234\",\n    \"avatar\": \"http://img.com/23\",\n    \"banner\": \"http://img.com/23\",\n    \"biography\": \"Life is beautiful\",\n    \"Location\": \"Medellin\",\n    \"webSite\": \"www.name.com.co\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/yellow/v1/users/611db022fac91638b0b7eb25?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"yellow",
+								"v1",
+								"users",
+								"611db022fac91638b0b7eb25"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yellow: Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDU2Y2QxODZmODdkY2RjMGYyYzM2ZCIsImVtYWlsIjoiY2J1ZWx2YXNjQGdtYWlsLmNvbSIsIm5hbWUiOiJDYXJtZWxvIiwibGFzdG5hbWUiOiJCdWVsdmFzIiwiYmlydGhEYXRlIjoiMTk4Mi0xMi0xMyAwMDowMDowMCArMDAwMCBVVEMiLCJiaW9ncmFwaHkiOiIiLCJsb2NhdGlvbiI6IiIsIndlYlNpdGUiOiIiLCJleHAiOjE2Mjc4NDQ0MTF9.Z5CZZl4zhl2DBdt7JvKUYk69zlpsdaNzyqZWYRrVT4g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/yellow/v1/tweets/61058c62d4969cffc4a866f1/user/6105ac9e73231e99219f6701?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"yellow",
+								"v1",
+								"tweets",
+								"61058c62d4969cffc4a866f1",
+								"user",
+								"6105ac9e73231e99219f6701"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yellow: Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZmRiMDAyZTljYWUyN2EzOThhNjU0YiIsIm5hbWUiOiIgIiwiZXhwIjoxNjI3ODMwMDk4fQ.k1YJLRV4_DAPHAdTfNHKONRG-yItug9eyqbjFPDxm7k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/yellow/v1/users/60fdb002e9cae27a398a654b?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"yellow",
+								"v1",
+								"users",
+								"60fdb002e9cae27a398a654b"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yellow: Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDVhYzllNzMyMzFlOTkyMTlmNjcwMSIsImVtYWlsIjoianBmQGdtYWlsLmNvbSIsIm5hbWUiOiJKdWFuIiwibGFzdG5hbWUiOiJQZXJleiIsImJpcnRoRGF0ZSI6IjE5OTEtMTItMTMgMDA6MDA6MDAgKzAwMDAgVVRDIiwiYmlvZ3JhcGh5IjoiIiwibG9jYXRpb24iOiIiLCJ3ZWJTaXRlIjoiIiwiZXhwIjoxNjI5NDIxOTE1fQ.1R9-Jzv4eRIOAEPcY_v_F1HOk7v4dEo9-PDFiGvNkKA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/yellow/v1/users?mediaType=json&page=1&limit=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"yellow",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tweet",
+			"item": [
+				{
+					"name": "Yellow: Delete Tweet",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDU2Y2QxODZmODdkY2RjMGYyYzM2ZCIsImVtYWlsIjoiY2J1ZWx2YXNjQGdtYWlsLmNvbSIsIm5hbWUiOiJDYXJtZWxvIiwibGFzdG5hbWUiOiJCdWVsdmFzIiwiYmlydGhEYXRlIjoiMTk4Mi0xMi0xMyAwMDowMDowMCArMDAwMCBVVEMiLCJiaW9ncmFwaHkiOiIiLCJsb2NhdGlvbiI6IiIsIndlYlNpdGUiOiIiLCJleHAiOjE2Mjc4NDQ0MTF9.Z5CZZl4zhl2DBdt7JvKUYk69zlpsdaNzyqZWYRrVT4g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/yellow/v1/users/61058f1f128f9ff409794259?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"yellow",
+								"v1",
+								"users",
+								"61058f1f128f9ff409794259"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yellow: Create Tweet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDU2Y2QxODZmODdkY2RjMGYyYzM2ZCIsImVtYWlsIjoiY2J1ZWx2YXNjQGdtYWlsLmNvbSIsIm5hbWUiOiJDYXJtZWxvIiwibGFzdG5hbWUiOiJCdWVsdmFzIiwiYmlydGhEYXRlIjoiMTk4Mi0xMi0xMyAwMDowMDowMCArMDAwMCBVVEMiLCJiaW9ncmFwaHkiOiIiLCJsb2NhdGlvbiI6IiIsIndlYlNpdGUiOiIiLCJleHAiOjE2Mjc4MzE5MzR9.4XlAnA-0VKTMhhyyobt8mjPMa7BiaJGG4vZcveTgK9U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"61058f1f128f9ff409794259\",\n    \"message\": \"Nothing to read\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/v1/tweets?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"tweets"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yellow: Get Tweets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWRiMDIyZmFjOTE2MzhiMGI3ZWIyNSIsImVtYWlsIjoiY2JjQGdtYWlsLmNvbSIsIm5hbWUiOiJDYXJtZWxvIiwibGFzdG5hbWUiOiJCdWVsdmFzIiwiYmlydGhEYXRlIjoiMTk5MS0xMi0xMyAwMDowMDowMCArMDAwMCBVVEMiLCJiaW9ncmFwaHkiOiIiLCJsb2NhdGlvbiI6IiIsIndlYlNpdGUiOiIiLCJleHAiOjE2Mjk0MjIwMDF9.3L0b2KsltYOrstJYGR-D364FVopzItrXNPVhrCCoUR8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/yellow/v1/tweets?mediaType=json&page=1&limit=20&userId=61056cd186f87dcdc0f2c36d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"yellow",
+								"v1",
+								"tweets"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "userId",
+									"value": "61056cd186f87dcdc0f2c36d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Yellow: Get Tweet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDU2Y2QxODZmODdkY2RjMGYyYzM2ZCIsImVtYWlsIjoiY2J1ZWx2YXNjQGdtYWlsLmNvbSIsIm5hbWUiOiJDYXJtZWxvIiwibGFzdG5hbWUiOiJCdWVsdmFzIiwiYmlydGhEYXRlIjoiMTk4Mi0xMi0xMyAwMDowMDowMCArMDAwMCBVVEMiLCJiaW9ncmFwaHkiOiIiLCJsb2NhdGlvbiI6IiIsIndlYlNpdGUiOiIiLCJleHAiOjE2Mjc4NDQ0MTF9.Z5CZZl4zhl2DBdt7JvKUYk69zlpsdaNzyqZWYRrVT4g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9000/api/yellow/v1/tweets/61058c62d4969cffc4a866f1?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"yellow",
+								"v1",
+								"tweets",
+								"61058c62d4969cffc4a866f1"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

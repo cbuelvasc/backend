@@ -25,3 +25,10 @@ go get github.com/swaggo/swag/cmd/swag
 ```sh
 swag init
 ```
+
+## Run
+
+- Run from docker-compose
+```sh
+docker-compose up -d 
+```

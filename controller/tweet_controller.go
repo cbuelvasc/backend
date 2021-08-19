@@ -13,6 +13,13 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+type TweetControllerInterface interface {
+	GetAllTweet(c echo.Context) error
+	GetTweet(c echo.Context) error
+	SaveTweet(c echo.Context) error
+	DeleteTweet(c echo.Context) error
+}
+
 type TweetController struct {
 	tweetRepository repository.TweetRepository
 	userRepository  repository.UserRepository

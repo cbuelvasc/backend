@@ -1,4 +1,4 @@
-basePath: /api/v1
+basePath: /api/yellow/v1
 definitions:
   handler.APIError:
     properties:
@@ -105,11 +105,11 @@ definitions:
     type: object
 info:
   contact: {}
-  description: Provides access to the core features of Golang User REST API
+  description: Provides access to the core features of Twitter REST API
   license:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: http://swagger.io/terms/
-  title: Golang User REST API
+  title: Twitter REST API
   version: "1.0"
 paths:
   /signin:

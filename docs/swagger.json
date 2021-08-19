@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Provides access to the core features of Golang User REST API",
-        "title": "Golang User REST API",
+        "description": "Provides access to the core features of Twitter REST API",
+        "title": "Twitter REST API",
         "termsOfService": "http://swagger.io/terms/",
         "contact": {},
         "license": {
@@ -10,7 +10,7 @@
         },
         "version": "1.0"
     },
-    "basePath": "/api/v1",
+    "basePath": "/api/yellow/v1",
     "paths": {
         "/signin": {
             "post": {

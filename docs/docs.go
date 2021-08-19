@@ -846,10 +846,10 @@ type swaggerInfo struct {
 var SwaggerInfo = swaggerInfo{
 	Version:     "1.0",
 	Host:        "",
-	BasePath:    "/api/v1",
+	BasePath:    "/api/yellow/v1",
 	Schemes:     []string{},
-	Title:       "Golang User REST API",
-	Description: "Provides access to the core features of Golang User REST API",
+	Title:       "Twitter REST API",
+	Description: "Provides access to the core features of Twitter REST API",
 }
 
 type s struct{}

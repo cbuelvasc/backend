@@ -18,18 +18,17 @@ import (
 var userController *controller.UserController
 var tweetController *controller.TweetController
 
-// @title Golang User REST API
-// @description Provides access to the core features of Golang User REST API
+// @title Twitter REST API
+// @description Provides access to the core features of Twitter REST API
 // @version 1.0
 // @termsOfService http://swagger.io/terms/
 // license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
-// @BasePath /api/v1
+// @BasePath /api/yellow/v1
 // @securityDefinitions.apikey ApiKeyAuth
 // @in header
 // @name Authorization
 func main() {
-
 	e := echo.New()
 
 	e.HTTPErrorHandler = handler.ErrorHandler
@@ -42,8 +41,6 @@ func main() {
 	routes.GetUserApiRoutes(e, userController)
 	routes.GetTweetApiRoutes(e, tweetController)
 	routes.GetSwaggerRoutes(e)
-
-	// echo server 9000
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%s", config.ServerPort)))
 }
 
